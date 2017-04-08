@@ -15,9 +15,9 @@ def contact(request):
 			second_name = form.cleaned_data['second_name']
 			email = form.cleaned_data['email']
 			message = form.cleaned_data['message']
-			recipients = ['info@avitosoft24.ru']
+			recipients = ['e-mail получателя']
 			try:
-				send_mail(subject, message, 'info@avitosoft24.ru', recipients)
+				send_mail(subject, message, 'e-mail отправителя', recipients)
 			except BadHeaderError: #Защита от уязвимости
 				return HttpResponse('Invalid header found')
 			post = form.save()
