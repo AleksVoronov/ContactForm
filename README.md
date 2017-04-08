@@ -1,1 +1,1 @@
-# ContactForm
+# Форма обратной связи для django
